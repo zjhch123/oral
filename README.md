@@ -47,3 +47,31 @@ gulp和webpack
 怎么清除浮动？  
 这种问题不用问了
 
+BFC有哪些用处？  
+eg:一个input组件，宽度一定，左侧label变化，右侧input宽度自适应
+
+有哪几种垂直居中方式？  
+1、子元素用行高撑起父元素
+
+2、父元素：  
+position: relative;  
+子元素：  
+position: absolute;
+top: 50%;
+margin-top: -0.5 * width;  
+或者tranform: translateY(-50%);
+
+3、父元素：  
+display: table-cell;
+height: 100px;
+vertical-align: middle;  
+子元素：  
+不要重置vertical-align即可，其它随意  
+
+4、父元素：  
+```
+<div>
+    <i style="line-height: 100px;">&nbsp;</i>
+    <span style="vertical-align: middle;">我是垂直居中的</span>
+</div>
+```
